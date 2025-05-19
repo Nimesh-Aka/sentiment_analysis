@@ -1,0 +1,455 @@
+:root {
+    --primary-color: #0096ff;
+    --primary-dark: #0078cc;
+    --primary-light: #e1f1ff;
+    --secondary-color: #f8f9fa;
+    --text-color: #333;
+    --text-light: #6c757d;
+    --positive-color: #4CAF50;
+    --negative-color: #F44336;
+    --border-radius: 12px;
+    --shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    --card-padding: 25px;
+}
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #f5f8fa;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 0.9rem 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+/* Hero Banner */
+.hero-banner {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9f7ff 100%);
+    padding: 3.5rem 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.hero-banner h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.hero-banner .lead {
+    font-size: 1.3rem;
+    color: #555;
+    margin-bottom: 1.8rem;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+}
+
+.stars {
+    color: #ffc107;
+    margin-right: 12px;
+    font-size: 1.2rem;
+}
+
+.rating-value {
+    font-weight: 600;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+.product-spotlight {
+    position: relative;
+    text-align: center;
+}
+
+.product-image {
+    max-width: 85%;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.badge-new {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    font-size: 0.8rem;
+    padding: 6px 18px;
+    border-radius: 20px;
+    transform: rotate(15deg);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Cards */
+.dashboard-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.card-header-gradient, .form-header-gradient {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    padding: 20px 25px;
+    text-align: center;
+    position: relative;
+}
+
+.header-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.card-header-gradient h2, .form-header-gradient h2 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.card-content {
+    padding: var(--card-padding);
+}
+
+/* Sentiment Overview */
+.sentiment-chart-container {
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto 20px;
+}
+
+.sentiment-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+
+.stat-box {
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    width: 45%;
+}
+
+.stat-box.positive {
+    background-color: rgba(76, 175, 80, 0.1);
+    border-left: 4px solid var(--positive-color);
+}
+
+.stat-box.negative {
+    background-color: rgba(244, 67, 54, 0.1);
+    border-left: 4px solid var(--negative-color);
+}
+
+.stat-box i {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.stat-box.positive i {
+    color: var(--positive-color);
+}
+
+.stat-box.negative i {
+    color: var(--negative-color);
+}
+
+.stat-number {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+/* Insights */
+.insight-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+}
+
+.insight-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.insight-list li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.insight-icon {
+    color: var(--primary-color);
+    margin-right: 12px;
+    margin-top: 3px;
+}
+
+.highlight {
+    background-color: rgba(0, 150, 255, 0.1);
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    font-weight: 500;
+    padding: 12px;
+    transition: all 0.3s;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 150, 255, 0.3);
+}
+
+/* Review Form */
+.review-form-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.review-input {
+    border: 2px solid #e8e8e8;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 1rem;
+    transition: all 0.3s;
+    resize: none;
+}
+
+.review-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(0, 150, 255, 0.15);
+}
+
+.form-feedback {
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-light);
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.feedback-icon {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin-right: 15px;
+}
+
+.feedback-message {
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.submit-button {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    font-weight: 500;
+    padding: 12px;
+    transition: all 0.3s;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.submit-button:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 150, 255, 0.3);
+}
+
+/* Reviews List */
+.reviews-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #eee;
+}
+
+.review-filters {
+    display: flex;
+}
+
+.filter-btn {
+    background: none;
+    border: none;
+    padding: 5px 15px;
+    margin-right: 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.search-box {
+    position: relative;
+    width: 250px;
+}
+
+.search-input {
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    padding: 8px 15px 8px 35px;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.reviews-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.review-item {
+    padding: 20px 25px;
+    border-bottom: 1px solid #eee;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.review-author {
+    display: flex;
+    align-items: center;
+}
+
+.review-author i {
+    color: #666;
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+.review-meta {
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.review-date {
+    margin-right: 10px;
+}
+
+.sentiment-indicator {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sentiment-indicator.positive {
+    background-color: rgba(76, 175, 80, 0.2);
+}
+
+.sentiment-indicator.positive i {
+    color: var(--positive-color);
+    font-size: 0.8rem;
+}
+
+.sentiment-indicator.negative {
+    background-color: rgba(244, 67, 54, 0.2);
+}
+
+.sentiment-indicator.negative i {
+    color: var(--negative-color);
+    font-size: 0.8rem;
+}
+
+.review-text {
+    margin: 0;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .hero-banner h1 {
+        font-size: 2.2rem;
+    }
+    
+    .reviews-toolbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .search-box {
+        width: 100%;
+        margin-top: 15px;
+    }
+    
+    .order-1 {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-banner {
+        padding: 2rem 0;
+    }
+    
+    .stat-box {
+        padding: 10px;
+    }
+    
+    .badge-new {
+        right: 20px;
+    }
+}
