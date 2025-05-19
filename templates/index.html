@@ -84,10 +84,6 @@
                                 <span>Overall sentiment is predominantly {{ 'positive' if data['positive'] > data['negative'] else 'negative' }}</span>
                             </li>
                             <li>
-                                <i class="fas fa-percentage insight-icon"></i>
-                                <span>{{ (data['positive'] / (data['positive'] + data['negative']) * 100)|round }}% of customers express satisfaction</span>
-                            </li>
-                            <li>
                                 <i class="fas fa-comment-alt insight-icon"></i>
                                 <span>Most mentioned topics: <span class="highlight">grip quality</span>, <span class="highlight">vibrant color</span></span>
                             </li>
